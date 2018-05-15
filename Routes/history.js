@@ -87,8 +87,8 @@ class HistoryRoute {
       }
     });
 
-    app.listen(this.port, function(this.port) {
-        console.log('\n\nHistory cloud app started at port: ' + this.port)
+    app.listen(this.port, function(port) {
+        console.log('\n\nHistory cloud app started at port: ' + port)
     })
     console.log("here I should be")
   }
