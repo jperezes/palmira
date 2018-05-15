@@ -36,9 +36,10 @@ const sendRequest = async (data, parentMethod) => {
  * SparkBotApi register the bot to Cisco Spark Api
  */
 class HistoryRoute {
-	constructor() {
+	constructor(port) {
     this.app = express()
     this.initServer(this.app);
+    this.port = port
 
 
 	}
@@ -85,10 +86,9 @@ class HistoryRoute {
         res.send("Error processing the post request" + e)
       }
     });
-    let port = 3084
 
-    app.listen(port, function(port) {
-        console.log('\n\nHistory cloud app started at port: ' + port)
+    app.listen(this.port, function(this.port) {
+        console.log('\n\nHistory cloud app started at port: ' + this.port)
     })
     console.log("here I should be")
   }

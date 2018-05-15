@@ -5,7 +5,7 @@ const spCollectionName = process.env.SP_COL_NAME
 
 //create mongo connection
 const con = mongoose.createConnection(mongoUrl)
-const SpaceModel = con.model('palmiraSpace', spaceSchema);
+const SpaceModel = con.model(spCollectionName, spaceSchema);
 
 class PalmiraSpaceRoute {
 	constructor() {

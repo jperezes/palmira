@@ -9,7 +9,7 @@ mongoose.Promise = global.Promise;
 
 //create mongo connection
 const con = mongoose.createConnection(mongoUrl)
-const UserModel = con.model('userSpace', userSchema);
+const UserModel = con.model(userCollectionName, userSchema);
 
 class UserSpaceRoute {
 	constructor() {
