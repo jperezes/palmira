@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "dependencies": {
     "bluebird": "^3.5.0",
-    "mongo": "^0.1.0",
     "express": "^4.16.2",
+    "mongo": "^0.1.0",
     "mongoose": "^4.9.3",
     "promise": "^7.1.1",
+    "request": "^2.86.0",
     "request-promise": "^4.2.0"
   },
   "engines": {
