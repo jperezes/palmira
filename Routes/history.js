@@ -40,13 +40,13 @@ class HistoryRoute {
     this.app = express()
     this.initServer(this.app);
     console.log("port in constructor with number " + port)
-    this.config.port = port
+    this.port = port
 	}
   /**
    * Init the express server
    */
   initServer(app){
-    let port = this.config.port
+    let port = this.port
     console.dir("Initializing Palmira web service at port " + port)
     app.use(bodyParser.urlencoded({extended: true}));
 
