@@ -39,16 +39,15 @@ class HistoryRoute {
 	constructor(port) {
     this.app = express()
     this.initServer(this.app);
-    this.port = port
-
-
+    console.log("port in constructor with number " + port)
+    this.config.port = port
 	}
   /**
    * Init the express server
    */
   initServer(app){
-
-    console.dir("Initializing Palmira web service at port " + this.port)
+    let port = this.config.port
+    console.dir("Initializing Palmira web service at port " + port)
     app.use(bodyParser.urlencoded({extended: true}));
 
     app.use(bodyParser.json());
@@ -87,7 +86,7 @@ class HistoryRoute {
       }
     });
 
-    app.listen(this.port, function(port) {
+    app.listen(port, function(port) {
         console.log('\n\nHistory cloud app started at port: ' + port)
     })
     console.log("here I should be")
