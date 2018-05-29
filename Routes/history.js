@@ -40,7 +40,6 @@ class HistoryRoute {
     this.config = Object.assign({port}, defaults);
     this.app = express()
     this.initServer(this.app);
-    console.log("port in constructor with number " + port)
 	}
   /**
    * Init the express server
