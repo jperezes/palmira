@@ -45,7 +45,8 @@ class HistoryRoute {
   /**
    * Init the express server
    */
-  initServer(app, port){
+  initServer(app){
+    let port = this.config.port
     console.dir("Initializing Palmira web service at port " + port)
     app.use(bodyParser.urlencoded({extended: true}));
 
