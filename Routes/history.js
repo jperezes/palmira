@@ -48,7 +48,7 @@ class HistoryRoute {
    */
   initServer(app){
 
-    console.dir("Initializing Palmira web service at port ")
+    console.dir("Initializing Palmira web service at port " + this.port)
     app.use(bodyParser.urlencoded({extended: true}));
 
     app.use(bodyParser.json());
