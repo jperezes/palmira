@@ -11,7 +11,7 @@ let rp = require('request-promise');
 
 // Default options
 const defaults = {
-  url: "https://api.ciscospark.com",
+  url: "https://test.com",
   headers:{
     'Content-Type': 'application/json; charset=utf-8'
   },
@@ -37,16 +37,15 @@ const sendRequest = async (data, parentMethod) => {
  */
 class HistoryRoute {
 	constructor(port) {
+    this.config = Object.assign({port}, defaults);
     this.app = express()
     this.initServer(this.app);
     console.log("port in constructor with number " + port)
-    this.port = port
 	}
   /**
    * Init the express server
    */
-  initServer(app){
-    let port = this.port
+  initServer(app, port){
     console.dir("Initializing Palmira web service at port " + port)
     app.use(bodyParser.urlencoded({extended: true}));
 
